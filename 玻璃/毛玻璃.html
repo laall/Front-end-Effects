@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                position: relative;
+                /* 加载背景图 */
+                background-image: url(img/b.jpg);
+                /* 背景图垂直、水平均居中 */
+                background-position: center center;
+                /* 背景图不平铺 */
+                background-repeat: no-repeat;
+                /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+                background-attachment: fixed;
+                /* 让背景图基于容器大小伸缩 */
+                background-size: cover;
+                /* 设置背景颜色，背景图加载过程中会显示背景色 */
+                background-color: #464646;
+            }
+
+            .cover img {
+                position: absolute;
+                filter: blur(10px);
+                margin-top: -20px;
+                z-index: -1;
+            }
+
+            .box {
+                width: 100%;
+            }
+
+            .cover {
+                font-size: 18px;
+                width: 800px;
+                height: 400px;
+                position: relative;
+                left: 50%;
+                top: 100px;
+                margin-left: -400px;
+                background-color: rgb(255, 255, 255);
+                overflow: hidden;
+                box-sizing: border-box;
+                z-index: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="cover">
+                <img id="pic" src="./img/b.jpg" alt="" />
+                <h1>Life is a chess-board</h1>
+                <p>
+                    The chess-board is the world: the pieces are the phenomena of the universe;the rules of the game are what we call the laws of
+                    nature. The player on the other side is hidden from us. We know that his play is always fair, just and patient, but also we
+                    know,to our cost, that he never overlooks mistake, or makes the smallest allowance for ignorance.
+                </p>
+                <span><br />By Thomas Henry Huxley</span>
+            </div>
+        </div>
+        <script>
+            window.onload = function () {
+                var box = document.querySelector('.box')
+                var boxw = box.offsetWidth
+                var boxh = box.offsetheight
+                var pic = document.querySelector('#pic')
+                pic.style.width = boxw + 'px'
+                pic.style.height = boxh + 'px'
+                pic.style.marginLeft = 400 - boxw / 2 + 'px'
+            }
+        </script>
+    </body>
+</html>
