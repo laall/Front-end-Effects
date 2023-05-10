@@ -1,0 +1,12 @@
+{
+  "name": "Front-end-Effects",
+  "version": "1.0.0",
+  "description": "effects",
+  "main": "index.js",
+  "repository": "git@github.com:laall/Front-end-Effects.git",
+  "author": "Kinle <1435351453@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

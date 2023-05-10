@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let obj = {
+        id: 1
+      }
+
+      function f(param) {
+        console.log(this)
+        console.log(param)
+      }
+      // f('param') // global globalThis
+      f.call(obj, 'param')
+      call(f, obj, 'param')
+
+      function call(fn, obj, ...args) {
+        obj.temp = fn
+        obj.temp(args)
+        delete obj.temp
+      }
+
+      // function add() {
+      //   let args = Array.prototype.slice.call(arguments)
+      //   console.log([...arguments])
+      //   let inner = (...arguments) => {
+      //     console.log(arguments)
+      //     args = args.concat(arguments)
+      //     return inner
+      //   }
+      //   inner.toString = () => {
+      //     return args.reduce((prev, next) => {
+      //       return prev + next
+      //     }, 0)
+      //   }
+      //   return inner
+      // }
+      // console.log('add:', add(1)(2)(3, 4)(5, 6, 7, 8, 9)(10).toString())
+
+      // console.log(
+      //   [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].reduce((prev, next) => {
+      //     return prev + next
+      //   }, 0)
+      // )
+    </script>
+  </body>
+</html>
