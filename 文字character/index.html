@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>character</title>
+    <style>
+      body {
+        font-size: 16px;
+      }
+      ul {
+        list-style-type: none;
+      }
+      li {
+        position: relative;
+        margin: 10px;
+        display: inline-block;
+        transition: all 1s ease-in-out;
+      }
+      li:nth-child(-n + 9):hover {
+        color: white;
+        background-color: rgb(255, 0, 0);
+      }
+      .li1:hover {
+        color: yellow;
+        background-color: rgb(0, 0, 255);
+      }
+      .li2:hover {
+        border: 1px solid black;
+        border-radius: 50%;
+      }
+      .li3:hover {
+        transform: rotate3d(1, 1, 1, 360deg);
+      }
+      .li4:hover {
+        transform: rotate(360deg);
+      }
+      .li5:hover {
+        transform: rotate(360deg);
+        transform-origin: left bottom;
+      }
+      .li6:hover {
+        transform: scale(1.5);
+      }
+      .li7:hover {
+        transform: skew(10deg, 10deg);
+      }
+      .li8:hover {
+        transform: perspective(500px) translate3d(100px, 100px, 100px);
+      }
+
+      .li9 p::after {
+        content: '_';
+        font-size: 24px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 1s ease;
+      }
+      .li9:hover p::after {
+        content: '_____';
+      }
+
+      .li10:hover {
+        border-bottom: 2px solid black;
+      }
+
+      li:nth-child(n + 11):nth-child(-n + 21) {
+        color: white;
+        background-color: #409eff;
+        padding: 0 10px;
+        border: 1px solid #409eff;
+        border-radius: 20%;
+      }
+      .li11 {
+        filter: hue-rotate(90deg);
+      }
+      .li12 {
+        filter: grayscale(1);
+      }
+      .li13 {
+        filter: sepia(1);
+        /* 转换为棕色色调 */
+      }
+      .li14 {
+        filter: blur(5px);
+      }
+      .li15 {
+        filter: contrast(200%);
+      }
+      .li16 {
+        filter: drop-shadow(16px 16px 20px red) invert(75%);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="li1"><p>character</p></li>
+      <li class="li2"><p>character</p></li>
+      <li class="li3"><p>character</p></li>
+      <li class="li4"><p>character</p></li>
+      <li class="li5"><p>character</p></li>
+      <li class="li6"><p>character</p></li>
+      <li class="li7"><p>character</p></li>
+      <li class="li8"><p>character</p></li>
+      <li class="li9"><p>character</p></li>
+      <li class="li10"><p>character</p></li>
+      <br />
+      <li class="li11"><p>character</p></li>
+      <li class="li12"><p>character</p></li>
+      <li class="li13"><p>character</p></li>
+      <li class="li14"><p>character</p></li>
+      <li class="li15"><p>character</p></li>
+      <li class="li16"><p>character</p></li>
+      <li class="li17"><p>character</p></li>
+      <li class="li18"><p>character</p></li>
+      <li class="li19"><p>character</p></li>
+      <li class="li20"><p>character</p></li>
+      <li class="li0"><p>character</p></li>
+    </ul>
+  </body>
+</html>
