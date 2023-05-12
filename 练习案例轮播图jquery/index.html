@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+    <script src="./js/jquery.js"></script>
+  </head>
+
+  <body>
+    <div class="carousel">
+      <div class="car_con">
+        <span id="arrow_left" class="glyphicon glyphicon-chevron-left"></span>
+        <span id="arrow_right" class="glyphicon glyphicon-chevron-right"></span>
+      </div>
+      <br />
+      <ul class="car_lis">
+        <li class="sel_li"><img index="0" src="./images/0.jpg" /></li>
+        <li class="sel_li"><img index="1" src="./images/1.jpg" /></li>
+        <li class="sel_li"><img index="2" src="./images/2.jpg" /></li>
+        <li class="sel_li"><img index="3" src="./images/3.jpg" /></li>
+      </ul>
+      <script>
+        $(function () {
+          var ad_index = 0
+          var interval = setInterval(function () {
+            ad_index++
+            if (ad_index > 3) {
+              ad_index = 0
+            }
+            console.log($('.sel_li')[ad_index])
+            $('.sel_li').eq(ad_index).css('clip-path', 'inset(0px round 10px)')
+            // $('.sel_li')[index].css
+            $('.car_con').css('background-image', 'url("./images/' + ad_index + '.jpg")')
+          }, 2000)
+
+          $('.car_lis').on('click', 'img', function (e) {
+            if (e.target) {
+              $('.car_con').css('background-image', 'url("' + decodeURI($(e.target).prop('src')) + '")')
+              ad_index = e.target.getAttribute('index')
+              clearInterval(interval)
+              interval = setInterval(function () {
+                ad_index++
+                if (ad_index > 3) {
+                  ad_index = 0
+                }
+                // console.log('url("../images/\ \(' + ad_index + '\).jpg")');
+                $('.car_con').css('background-image', 'url("./images/' + ad_index + '.jpg")')
+              }, 2000)
+
+              //  动画效果无法清除！！！
+              // var lis = document.querySelector('.car_lis').querySelectorAll('li')
+              // console.log(lis);
+              // for (var i = 0; i < lis.length;i++) {
+              //     lis[i].className = ''
+              // }
+
+              // $('e.target').css('animation-duration','1s').siblings().css('animation-duration','0s')
+            }
+          })
+        })
+      </script>
+    </div>
+  </body>
+</html>

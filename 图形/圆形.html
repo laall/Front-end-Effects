@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .circle {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 10px solid;
+        border-image: radial-gradient(circle at top left, #ff7f00, #ff0080, #a70cff, #00bfff, #1aff1a) 1;
+        border-radius: 50%;
+        transition: all 1s ease-in-out;
+      }
+      .circle:hover {
+        transform: rotate(360deg);
+      }
+
+      .circle2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        /* border: 10px solid; */
+        /* border-image: linear-gradient(to right, #dce35b, #45b649) 1; */
+        /* border-image: radial-gradient(circle at top left, #ff7f00, #ff0080, #a70cff, #00bfff, #1aff1a) 1; */
+        background: radial-gradient(circle at top left, #ff7f00, #ff0080, #a70cff, #00bfff, #1aff1a);
+        /* background: linear-gradient(to bottom, #ff7f00, #ff0080, #a70cff, #00bfff, #1aff1a); */
+        transition: all 1s ease-in-out;
+      }
+      .circle2:hover {
+        transform: rotate(360deg);
+      }
+      .circle3 {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle">
+      <p>circle</p>
+    </div>
+    <div class="circle2">
+      <div class="circle3"><p>circle</p></div>
+    </div>
+  </body>
+</html>
