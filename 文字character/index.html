@@ -52,14 +52,15 @@
 
       .li9 p::after {
         content: '_';
-        font-size: 24px;
+        font-size: 16px;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
         transition: all 1s ease;
       }
       .li9:hover p::after {
-        content: '_____';
+        transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transform: translateX(-50%) scaleX(8);
       }
 
       .li10:hover {
