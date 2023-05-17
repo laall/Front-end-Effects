@@ -2,6 +2,16 @@
 # yarn lockfile v1
 
 
+a-calc@^1.0.28:
+  version "1.0.28"
+  resolved "https://registry.npmmirror.com/a-calc/-/a-calc-1.0.28.tgz#6d2fe43c58aeb853dabdcb98de2236571b420216"
+  integrity sha512-rlXHLjQYRS/a3c4R0mQM81CO7IqXcyU5T3uYbSY4NgDezRTKpocavC/mg9ML4DEiM9QJIDdI7yiazfmXIZbH+w==
+
+bignumber.js@^9.1.1:
+  version "9.1.1"
+  resolved "https://registry.npmmirror.com/bignumber.js/-/bignumber.js-9.1.1.tgz#c4df7dc496bd849d4c9464344c1aa74228b4dac6"
+  integrity sha512-pHm4LsMJ6lzgNGVfZHjMoO8sdoRhOzOH4MLmY65Jg70bpxCKu5iOHNJyfF6OyvYw7t8Fpf35RuzUyqnQsj8Vig==
+
 lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.npmmirror.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"

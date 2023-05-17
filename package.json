@@ -7,6 +7,8 @@
   "author": "Kinle <1435351453@qq.com>",
   "license": "MIT",
   "dependencies": {
+    "a-calc": "^1.0.28",
+    "bignumber.js": "^9.1.1",
     "lodash": "^4.17.21"
   }
 }
