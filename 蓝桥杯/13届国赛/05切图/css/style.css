@@ -1,0 +1,149 @@
+/*TODO：请补充代码*/
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 1920px;
+}
+.top-container {
+  background-image: url(../images/banner-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1920px;
+  height: 753px;
+}
+.center-container {
+  background-color: #2873f9;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1920px;
+  height: 745px;
+}
+
+.banner-title {
+  position: absolute;
+  top: 52px;
+  right: 640px;
+  width: 640px;
+  height: 440px;
+  background-image: url(../images/banner-title.png);
+}
+.part1-bg {
+  position: absolute;
+  top: 678px;
+  right: 424px;
+  width: 1072px;
+  height: 698px;
+  background-image: url(../images/part1-bg.png);
+}
+.description {
+  position: absolute;
+  top: 103px;
+  right: 346px;
+  width: 380px;
+  height: 28px;
+  font-family: PingFangSC-Semibold;
+  font-size: 20px;
+  color: #ec6853;
+  letter-spacing: 0;
+  text-align: center;
+  font-weight: 600;
+}
+.small-right {
+  position: absolute;
+  top: 112px;
+  right: 314px;
+  width: 16px;
+  height: 10px;
+  clear: both;
+}
+.small-left {
+  position: absolute;
+  top: 112px;
+  right: 742px;
+  width: 16px;
+  height: 10px;
+}
+.icon {
+  position: relative;
+  width: 187px;
+  height: 140px;
+  display: inline-block;
+  margin-right: 74px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  top: 849px;
+  left: 475px;
+  width: 1072px;
+  height: 300px;
+}
+.content-img {
+  width: 60px;
+  height: 60px;
+}
+.content-title {
+  height: 24px;
+  overflow: visible;
+  white-space: nowrap;
+  margin-top: 15px;
+  font-family: PingFangSC-Semibold;
+  font-size: 20px;
+  color: #333333;
+  letter-spacing: 0;
+  text-align: center;
+  font-weight: 600;
+}
+.content-dec {
+  height: 28px;
+  margin-top: 10px;
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  color: #666666;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 24px;
+  font-weight: 400;
+}
+.content-label {
+  width: 54px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.main-button {
+  position: absolute;
+
+  top: 1221px;
+  left: 671px;
+  width: 579px;
+  height: 95px;
+}
+.main-hand {
+  position: absolute;
+  top: 1295px;
+  left: 942px;
+  width: 38px;
+  height: 45px;
+}
+.left {
+  position: absolute;
+  top: 1250.47px;
+  left: 243.95px;
+  width: 230.43px;
+  height: 132.28px;
+}
+.right {
+  position: absolute;
+  top: 1250.47px;
+  left: 1445.95px;
+  width: 230.42px;
+  height: 132.28px;
+}
