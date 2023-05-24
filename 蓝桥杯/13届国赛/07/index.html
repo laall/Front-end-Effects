@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>一起会议吧</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/iconfont/iconfont.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- TODO：请在下面实现需求 -->
+      <!-- 登录/注销窗口 -->
+      <div v-if="currentPage==='login'" class="login">
+        <div class="left-tools">
+          <a class="close-btn"></a>
+          <a class="shrink-btn"></a>
+        </div>
+        <h3>登录</h3>
+        <p>
+          选择用户：<select id="selectUser" v-model="myInfo">
+            <option v-for="item in userList" :key="item.id" :value="item">{{item.name}}</option>
+          </select>
+        </p>
+        <p>当前用户为：Tom</p>
+        <a class="login-btn" @click="loginUser">登录</a>
+      </div>
+      <div class="login" v-if="currentPage==='logout'">
+        <div class="left-tools">
+          <a class="close-btn"></a>
+          <a class="shrink-btn"></a>
+        </div>
+        <h3>注销</h3>
+
+        <p>当前用户为：Tom</p>
+
+        <a class="login-btn" @click="currentPage='login'">注销</a>
+      </div>
+
+      <!-- 右侧显示用户列表窗口按钮 -->
+      <button v-show="!showTools" id="show" class="right-btn" @click="showTools=true">
+        <span class="iconfont icon-left-arrow"></span>
+      </button>
+
+      <!-- 用户列表窗口 -->
+      <div v-show="currentPage!=='login' && showTools" class="user-dialog">
+        <!-- 用户列表窗口上侧工具栏 -->
+        <ul class="tools">
+          <li class="tools-left">
+            <button>
+              <span :class="sideType==='min'?'active':''" class="iconfont icon-close" @click="sideType='min'"></span>
+            </button>
+            <button>
+              <span :class="sideType==='mid'?'active':''" class="iconfont icon-dialog" @click="sideType='mid'"></span>
+            </button>
+            <button :class="sideType==='max'?'active':''">
+              <span class="iconfont icon-list" @click="sideType='max'"></span>
+            </button>
+          </li>
+          <li class="tools-right">
+            <button class="show-list" @click="hideTools">
+              <span class="iconfont icon-retract"></span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- 用户列表 -->
+        <ul class="say-list">
+          <li>
+            <span class="iconfont icon-microphone"></span>
+          </li>
+          <li class="line"></li>
+          <li>正在讲话：Tom；</li>
+        </ul>
+        <ul v-show="sideType!=='min'" class="user-list">
+          <li>
+            <img class="header" :src="myInfo.imgPath" />
+            <div class="user-name">
+              <span v-if="myInfo.isHost" class="iconfont icon-user header-icon"></span>
+              <span class="iconfont icon-microphone"></span>
+              {{myInfo.name}}
+            </div>
+          </li>
+          <li v-show="sideType==='max'" v-for="item in userList" :key="item.id" v-if="item.id!==myInfo.id">
+            <img class="header" :src="item.imgPath" />
+            <div class="user-name">
+              <span v-if="item.isHost" class="iconfont icon-user header-icon"></span>
+              <span class="iconfont icon-microphone"></span>
+              {{item.name}}
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript" src="./js/vue.js"></script>
+    <script type="text/javascript" src="./js/axios.min.js"></script>
+    <script type="text/javascript">
+      // TODO：请在下面实现需求
+      new Vue({
+        el: '#app',
+        data() {
+          return {
+            currentPage: 'login',
+            userList: [],
+            myInfo: {},
+            showTools: true,
+            sideType: 'mid'
+          }
+        },
+        created() {
+          this.getUsers()
+        },
+
+        methods: {
+          async getUsers() {
+            const { data } = await axios.get('./js/userList.json')
+            this.userList = data
+            this.myInfo = data[0]
+          },
+          loginUser() {
+            // this.userList.splice(this.userList.indexOf(this.myInfo), 1)
+
+            this.currentPage = 'logout'
+          },
+          hideTools() {
+            this.showTools = false
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

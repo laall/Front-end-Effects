@@ -1,5 +1,4 @@
 // TODO：请补充代码
-
 const $ = selector => document.querySelector(selector)
 
 // console.log(new Function('a', 'b', 'return a+b')(1, 50))
