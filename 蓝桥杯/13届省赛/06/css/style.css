@@ -1,0 +1,124 @@
+/*
+ TODO：请补充代码
+*/
+body{
+margin: 0;
+}
+.up-container{
+  height: 427px;
+  background-color: #a6b1e1;
+}
+.header{
+  height: 46px;
+  width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+
+  margin: 0 auto;
+  margin-top: 13px;
+
+}
+.header p{
+  display: inline-block;
+  
+}
+.header .left {
+  margin-right: 365px;
+ }
+.header .left p{
+  font-size: 18px;
+ }
+.header .right p{
+  font-size: 16px;
+ margin-left: 8px;
+ margin-right: 8px;
+}
+.title{
+  margin-top: 30px;
+  width: 100%;
+}
+.title p{
+  font-size: 45px;
+  color: black;
+  text-align: center;
+}
+.title2{
+  margin-top: 62px;
+  width: 100%;
+}
+.title2 p{
+  font-size: 21px;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+}
+.title3{
+  margin-top: 36px;
+  width: 100%;
+}
+.title3 p{
+  font-size: 18px;
+  font-weight: 200;
+  color: #efbfbf;
+  width: fit-content;
+  padding: 10px;
+  margin: 0 auto;
+/* border:  #efbfbf ;
+border-radius: 2px;
+border-style: inset; */
+  box-shadow:inset 0 0 0 2px #efbfbf;
+}
+
+
+
+.down-container{
+  margin: 74px auto auto auto;
+  height: 302px;
+  width: 1024px;
+ 
+}
+.content{
+  display: flex;
+  flex-wrap: wrap
+}
+.content div{
+    width: 502px;
+    height: 144px;
+}
+.content div:nth-child(1){
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.content div:nth-child(2){
+  margin-bottom: 20px;
+}
+.content div:nth-child(3){
+  margin-right: 20px;
+}
+.content div p:first-child{
+  margin: 0;
+  font-size: 30px;
+  font-weight: 200;
+  color: black;
+}
+.content div p:nth-child(2){
+  font-size: 18px;
+  color: #aaa;
+  line-height: 1.4em;
+}
+.bottom{
+  height: 80px;
+  font-size: 14px0;
+  color: #aaa;
+}
+.bottom p:first-child{
+
+  width: fit-content;
+    margin: 30px auto 0 auto;
+}
+.bottom p:nth-child(2){
+  
+  width: fit-content;
+  margin: 10px auto 0 auto;
+}
