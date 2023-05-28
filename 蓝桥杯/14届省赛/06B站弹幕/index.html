@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>视频弹幕</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="video-header">
+        <h1 class="title">workerman基础</h1>
+        <div class="video-info">
+          <span>13.2亿播放</span>
+          <span>656.5万弹幕</span>
+          <span>2022-12-11 15:29:24</span>
+        </div>
+      </div>
+      <div id="video">
+        <video src="./video/video1.mp4" poster="" id="vd" controls>您的浏览器不支持 video 标签。</video>
+      </div>
+      <div class="player-sending-area">
+        <p class="player-video-info">231 人正在看，4396 条弹幕</p>
+        <div class="switch-box">
+          <input type="checkbox" name="" id="switchButton" class="switch" checked />
+          <label for="switchButton"></label>
+        </div>
+        <input type="text" name="" id="bulletContent" placeholder="请输入您的弹幕" />
+        <button id="sendBulletBtn">发送</button>
+      </div>
+    </div>
+    <br />
+    <!-- <input      style="margin-left: 100px; padding: 8px; background-color: #fff; border: 1px solid #e7e7e7; outline: none"
+      type="text"      placeholder="请输入您的弹幕"    />
+    <button style="padding: 8px; width: 70px; background-color: #00a1d6; color: white; border: 0">发送</button> -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,496 @@
+[
+  {
+    "icon": "bun.svg",
+    "descriptionEN": "Incredibly fast JavaScript runtime, bundler, transpiler and package manager...",
+    "descriptionCN": "令人难以置信的快速 JavaScript 运行时、打包器、转译器和包管理器……",
+    "name": "Bun",
+    "stars": 37087,
+    "tags": ["runtime", "bun"]
+  },
+  {
+    "icon": "tauri.svg",
+    "descriptionEN": "Build smaller, faster, and more secure desktop applications with a web fron...",
+    "descriptionCN": "使用 Web 前端构建更小、更快和更安全的桌面应用程序...",
+    "name": "Tauri",
+    "stars": 29820,
+    "tags": ["desktop"]
+  },
+  {
+    "icon": "tech-interview.svg",
+    "descriptionEN": "Curated coding interview preparation materials for busy software engineers",
+    "descriptionCN": "为忙碌的软件工程师精心策划的编码面试准备材料",
+    "name": "Tech Interview Handbook",
+    "stars": 21386,
+    "tags": ["learning"]
+  },
+  {
+    "icon": "react.svg",
+    "descriptionEN": "A declarative, efficient, and flexible JavaScript library for building user...",
+    "descriptionCN": "一个声明式的、高效的、灵活的 JavaScript 库，用于构建用户...",
+    "name": "React",
+    "stars": 19784,
+    "tags": ["framework", "vdom", "react"]
+  },
+  {
+    "icon": "nextjs.svg",
+    "descriptionEN": "The React Framework",
+    "descriptionCN": "响应式框架",
+    "name": "Next.js",
+    "stars": 19488,
+    "tags": [
+      "nodejs-framework",
+      "ssg",
+      "prefetch",
+      "react",
+      "universal",
+      "nextjs"
+    ]
+  },
+  {
+    "icon": "trpc.svg",
+    "descriptionEN": "Move Fast and Break Nothing. End-to-end typesafe APIs made easy.",
+    "descriptionCN": "快速行动，打破一切。端到端类型安全 API 变得简单。",
+    "name": "tRPC",
+    "stars": 15832,
+    "tags": [
+      "nodejs-framework",
+      "react",
+      "universal",
+      "rpc",
+      "websocket",
+      "data"
+    ]
+  },
+  {
+    "icon": "vite.svg",
+    "descriptionEN": "Next generation frontend tooling. It's fast!",
+    "descriptionCN": "下一代前端工具。它很快！",
+    "name": "Vite",
+    "stars": 15434,
+    "tags": ["build", "vite"]
+  },
+  {
+    "icon": "astro.svg",
+    "descriptionEN": "A website build tool for the modern web — powerful developer experience mee...",
+    "descriptionCN": "适用于现代网络的网站构建工具——强大的开发人员体验...",
+    "name": "Astro",
+    "stars": 15412,
+    "tags": ["ssg", "fullstack", "astro"]
+  },
+  {
+    "icon": "js.svg",
+    "descriptionEN": "A book series on JavaScript",
+    "descriptionCN": "关于 JavaScript 的系列丛书",
+    "name": "You Don't Know JS",
+    "stars": 14997,
+    "tags": ["learning", "book"]
+  },
+  {
+    "icon": "vscode.svg",
+    "descriptionEN": "Visual Studio Code",
+    "descriptionCN": "VSCode代码",
+    "name": "VS Code",
+    "stars": 14958,
+    "tags": ["ide"]
+  },
+  {
+    "icon": "playwright.svg",
+    "descriptionEN": "A framework for Web Testing and Automation. It allows testing Chromium, Firefox...",
+    "descriptionCN": "Web 测试和自动化的框架。它允许测试 Chromium、Firefox...",
+    "name": "Playwright",
+    "stars": 14329,
+    "tags": ["auto", "test"]
+  },
+  {
+    "icon": "tabby.svg",
+    "descriptionEN": "A terminal for a more modern age",
+    "descriptionCN": "更现代的终端",
+    "name": "Tabby",
+    "stars": 14066,
+    "tags": ["cli"]
+  },
+  {
+    "icon": "turborepo.svg",
+    "descriptionEN": "Incremental bundler and build system optimized for JavaScript and TypeScrip...",
+    "descriptionCN": "针对 JavaScript 和 TypeScript 优化的增量捆绑器和构建系统......",
+    "name": "Turborepo",
+    "stars": 13744,
+    "tags": ["build", "monorepo", "scaffolding", "caching"]
+  },
+  {
+    "icon": "qwik.svg",
+    "descriptionEN": "The HTML-first framework. Instant apps of any size with ~ 1kb JS",
+    "descriptionCN": "HTML优先的框架。任何大小的即时应用程序，约 1kb JS",
+    "name": "Qwik",
+    "stars": 13005,
+    "tags": ["framework", "universal", "vite"]
+  },
+  {
+    "icon": "mantine.svg",
+    "descriptionEN": "React components library with native dark theme support",
+    "descriptionCN": "具有原生深色主题支持的 React 组件库",
+    "name": "Mantine",
+    "stars": 12980,
+    "tags": ["component", "react"]
+  },
+  {
+    "icon": "tailwindcss.svg",
+    "descriptionEN": "A utility-first CSS framework for rapid UI development.",
+    "descriptionCN": "用于快速 UI 开发的实用程序优先 CSS 框架。",
+    "name": "Tailwind CSS",
+    "stars": 11860,
+    "tags": ["css-lib", "atomic-css", "tailwind"]
+  },
+  {
+    "icon": "docusaurus.svg",
+    "descriptionEN": "Easy to maintain open source documentation websites.",
+    "descriptionCN": "易于维护的开源文档网站。",
+    "name": "Docusaurus",
+    "stars": 11353,
+    "tags": ["doc", "react", "ssg"]
+  },
+  {
+    "icon": "solid.svg",
+    "descriptionEN": "A declarative, efficient, and flexible JavaScript library for building user...",
+    "descriptionCN": "一个声明式的、高效的、灵活的 JavaScript 库，用于构建用户...",
+    "name": "Solid",
+    "stars": 11060,
+    "tags": ["reactive", "framework", "solid"]
+  },
+  {
+    "icon": "zod.svg",
+    "descriptionEN": "TypeScript-first schema validation with static type inference",
+    "descriptionCN": "使用静态类型推断的 TypeScript 优先模式验证",
+    "name": "Zod",
+    "stars": 11041,
+    "tags": ["validation", "types", "schema"]
+  },
+  {
+    "icon": "remix.svg",
+    "descriptionEN": "Build Better Websites. Create modern, resilient user experiences with web f...",
+    "descriptionCN": "建立更好的网站。使用 Web f... 创建现代、有弹性的用户体验",
+    "name": "Remix",
+    "stars": 10793,
+    "tags": ["fullstack", "nodejs-framework", "react"]
+  },
+  {
+    "icon": "threejs.svg",
+    "descriptionEN": "JavaScript 3D Library.",
+    "descriptionCN": "JavaScript 3D 库。",
+    "name": "Three.js",
+    "stars": 10449,
+    "tags": ["3d"]
+  },
+  {
+    "icon": "typescript.svg",
+    "descriptionEN": "A superset of JavaScript that compiles to clean JavaScript output.",
+    "descriptionCN": "一个 JavaScript 的超集，可以编译为干净的 JavaScript 输出。",
+    "name": "TypeScript",
+    "stars": 10279,
+    "tags": ["compiler", "types"]
+  },
+  {
+    "icon": "svelte.svg",
+    "descriptionEN": "Cybernetically enhanced web apps",
+    "descriptionCN": "控制论增强的 Web 应用程序",
+    "name": "Svelte",
+    "stars": 10007,
+    "tags": ["framework", "svelte"]
+  },
+  {
+    "icon": "nest.svg",
+    "descriptionEN": "A progressive Node.js framework for building efficient, scalable, and enter...",
+    "descriptionCN": "一个渐进的 Node.js 框架，用于构建高效、可扩展和输入...",
+    "name": "Nest",
+    "stars": 9913,
+    "tags": ["nodejs-framework", "microservice"]
+  },
+  {
+    "icon": "vue.svg",
+    "descriptionEN": "A progressive, incrementally-adoptable framework for building UI on the web",
+    "descriptionCN": "用于在 Web 上构建 UI 的渐进式、可增量采用的框架",
+    "name": "Vue.js 2",
+    "stars": 9588,
+    "tags": ["framework", "vdom", "vue"]
+  },
+  {
+    "icon": "material-ui.svg",
+    "descriptionEN": " A robust, customizable, and accessible library of foundational and advance...",
+    "descriptionCN": "一个强大的、可定制的、可访问的基础和高级库……",
+    "name": "MUI",
+    "stars": 9580,
+    "tags": ["material", "react", "component", "design-system"]
+  },
+  {
+    "icon": "fresh.svg",
+    "descriptionEN": "The next-gen web framework.",
+    "descriptionCN": "下一代网络框架。",
+    "name": "Fresh",
+    "stars": 9425,
+    "tags": ["fullstack", "deno"]
+  },
+  {
+    "icon": "strapi.svg",
+    "descriptionEN": "The leading open-source headless CMS. It’s 100% JavaScript, fully customiza...",
+    "descriptionCN": "领先的开源无头 CMS。它是 100% JavaScript，完全定制......",
+    "name": "Strapi",
+    "stars": 8841,
+    "tags": ["nodejs-framework", "cms"]
+  },
+  {
+    "icon": "prisma.svg",
+    "descriptionEN": "Next-generation ORM for Node.js & TypeScript | PostgreSQL, MySQL, MariaDB, ...",
+    "descriptionCN": "用于 Node.js 和 TypeScript 的下一代 ORM | PostgreSQL、MySQL、MariaDB……",
+    "name": "Prisma",
+    "stars": 8756,
+    "tags": ["orm", "sql", "mongodb"]
+  },
+  {
+    "icon": "nodejs.svg",
+    "descriptionEN": "Node.js JavaScript runtime",
+    "descriptionCN": "Node.js JavaScript 运行时",
+    "name": "Node.js",
+    "stars": 8368,
+    "tags": ["runtime"]
+  },
+  {
+    "icon": "storybook.svg",
+    "descriptionEN": "A frontend workshop for building UI components and pages in isolation. Made...",
+    "descriptionCN": "用于单独构建 UI 组件和页面的前端研讨会。制作...",
+    "name": "Storybook",
+    "stars": 7958,
+    "tags": ["playground", "test", "react", "vue", "angular"]
+  },
+  {
+    "icon": "vue.svg",
+    "descriptionEN": "A progressive, incrementally-adoptable JavaScript framework for building UI...",
+    "descriptionCN": "用于构建 UI 的渐进式、可逐步采用的 JavaScript 框架......",
+    "name": "Vue.js 3",
+    "stars": 7956,
+    "tags": ["vue", "framework"]
+  },
+  {
+    "icon": "axios.svg",
+    "descriptionEN": "Promise based HTTP client for the browser and node.js",
+    "descriptionCN": "用于浏览器和 node.js 的基于 Promise 的 HTTP 客户端",
+    "name": "Axios",
+    "stars": 7739,
+    "tags": ["http"]
+  },
+  {
+    "icon": "deno.svg",
+    "descriptionEN": "A modern runtime for JavaScript and TypeScript.",
+    "descriptionCN": "适用于 JavaScript 和 TypeScript 的现代运行时。",
+    "name": "Deno",
+    "stars": 7525,
+    "tags": ["runtime", "types", "deno"]
+  },
+  {
+    "icon": "react-hook-form.svg",
+    "descriptionEN": "React Hooks for form state management and validation (Web + React Native)",
+    "descriptionCN": "用于表单状态管理和验证的 React Hooks（Web + React Native）",
+    "name": "React Hook Form",
+    "stars": 7366,
+    "tags": ["form", "react"]
+  },
+  {
+    "icon": "chakra-ui.svg",
+    "descriptionEN": "Simple, Modular & Accessible UI Components for your React Applications",
+    "descriptionCN": "用于 React 应用程序的简单、模块化和可访问的 UI 组件",
+    "name": "Chakra UI",
+    "stars": 7356,
+    "tags": ["component", "react", "access", "atomic-css"]
+  },
+  {
+    "icon": "angular.svg",
+    "descriptionEN": "The modern web developer’s platform",
+    "descriptionCN": "现代网络开发者平台",
+    "name": "Angular",
+    "stars": 7059,
+    "tags": ["framework", "angular"]
+  },
+  {
+    "icon": "slidev.svg",
+    "descriptionEN": "Presentation Slides for Developers",
+    "descriptionCN": "面向开发人员的演示幻灯片",
+    "name": "Slidev",
+    "stars": 7035,
+    "tags": ["presentation", "vue"]
+  },
+  {
+    "icon": "nuxt.svg",
+    "descriptionEN": "The Intuitive Web Framework, based on Vue 3.",
+    "descriptionCN": "基于 Vue 3 的直观 Web 框架。",
+    "name": "Nuxt 3",
+    "stars": 7027,
+    "tags": ["vue", "nodejs-framework", "universal", "ssg"]
+  },
+  {
+    "icon": "vueelementadmin.png",
+    "descriptionEN": "A magical vue admin",
+    "descriptionCN": "一个神奇的 vue 管理员",
+    "name": "Vue Element Admin",
+    "stars": 6789,
+    "tags": ["vue", "dashboard"]
+  },
+  {
+    "icon": "ant.svg",
+    "descriptionEN": "An enterprise-class UI design language and React UI library",
+    "descriptionCN": "企业级 UI 设计语言和 React UI 库",
+    "name": "Ant Design",
+    "stars": 6786,
+    "tags": ["component", "react", "design-system"]
+  },
+  {
+    "icon": "react-native.svg",
+    "descriptionEN": "A framework for building native applications using React",
+    "descriptionCN": "使用 React 构建本机应用程序的框架",
+    "name": "React Native",
+    "stars": 6504,
+    "tags": ["mobile", "react-native"]
+  },
+  {
+    "icon": "cypress.svg",
+    "descriptionEN": "Fast, easy and reliable testing for anything that runs in a browser.",
+    "descriptionCN": "对在浏览器中运行的任何内容进行快速、简单和可靠的测试。",
+    "name": "Cypress",
+    "stars": 6392,
+    "tags": ["test", "auto"]
+  },
+  {
+    "icon": "bootstrap.svg",
+    "descriptionEN": "The most popular HTML, CSS, and JavaScript framework for developing respons...",
+    "descriptionCN": "最流行的 HTML、CSS 和 JavaScript 框架，用于开发响应...",
+    "name": "Bootstrap",
+    "stars": 6359,
+    "tags": ["css-lib", "bootstrap"]
+  },
+  {
+    "icon": "swc.svg",
+    "descriptionEN": "A super-fast compiler written in rust",
+    "descriptionCN": "用 Rust 编写的超快编译器",
+    "name": "swc",
+    "stars": 6213,
+    "tags": ["compiler", "build"]
+  },
+  {
+    "icon": "frontendchecklist.jpg",
+    "descriptionEN": "The perfect Front-End Checklist for modern websites and meticulous develope...",
+    "descriptionCN": "适用于现代网站和精心开发的完美前端清单......",
+    "name": "Front-End Checklist",
+    "stars": 5956,
+    "tags": ["learning"]
+  },
+  {
+    "icon": "nx.svg",
+    "descriptionEN": "Smart, Fast and Extensible Build System",
+    "descriptionCN": "智能、快速和可扩展的构建系统",
+    "name": "Nx",
+    "stars": 5921,
+    "tags": ["monorepo", "build", "scaffolding", "react", "angular"]
+  },
+  {
+    "icon": "headlessui.svg",
+    "descriptionEN": "Completely unstyled, fully accessible UI components, designed to integrate ...",
+    "descriptionCN": "完全无样式、完全可访问的 UI 组件，旨在集成...",
+    "name": "Headless UI",
+    "stars": 5912,
+    "tags": ["react", "vue", "component", "headless", "tailwind"]
+  },
+  {
+    "icon": "puppeteer.svg",
+    "descriptionEN": "Headless Chrome Node.js API",
+    "descriptionCN": "无头 Chrome Node.js API",
+    "name": "Puppeteer",
+    "stars": 5906,
+    "tags": ["auto"]
+  },
+  {
+    "icon": "cra.svg",
+    "descriptionEN": "Set up a modern web app by running one command.",
+    "descriptionCN": "通过运行一个命令来设置现代 Web 应用程序。",
+    "name": "Create React App",
+    "stars": 5724,
+    "tags": ["boilerplate", "react", "serviceworker"]
+  },
+  {
+    "icon": "electron.svg",
+    "descriptionEN": "Build cross-platform desktop apps with JavaScript, HTML, and CSS",
+    "descriptionCN": "使用 JavaScript、HTML 和 CSS 构建跨平台桌面应用程序",
+    "name": "Electron",
+    "stars": 5682,
+    "tags": ["desktop"]
+  },
+  {
+    "icon": "unocss.svg",
+    "descriptionEN": "The instant on-demand atomic CSS engine.",
+    "descriptionCN": "即时按需原子 CSS 引擎。",
+    "name": "UnoCSS",
+    "stars": 5472,
+    "tags": ["css-in-js", "atomic-css"]
+  },
+  {
+    "icon": "vitest.svg",
+    "descriptionEN": "A Vite-native test framework. It's fast!",
+    "descriptionCN": "一个 Vite-native 测试框架。它很快！",
+    "name": "Vitest",
+    "stars": 5304,
+    "tags": ["test-framework", "test", "vue", "react", "vite"]
+  },
+  {
+    "icon": "rome.svg",
+    "descriptionEN": "Unified developer tools for JavaScript, TypeScript, and the web",
+    "descriptionCN": "用于 JavaScript、TypeScript 和 Web 的统一开发人员工具",
+    "name": "Rome",
+    "stars": 5183,
+    "tags": ["build", "lint"]
+  },
+  {
+    "icon": "redwood.svg",
+    "descriptionEN": "The App Framework for Startups",
+    "descriptionCN": "初创公司的应用程序框架",
+    "name": "Redwood",
+    "stars": 5004,
+    "tags": ["fullstack", "graphql", "nodejs-framework"]
+  },
+  {
+    "icon": "pinia.svg",
+    "descriptionEN": "Intuitive, type safe, light and flexible Store for Vue using the compositio...",
+    "descriptionCN": "使用组合的 Vue 直观、类型安全、轻便和灵活的商店......",
+    "name": "Pinia",
+    "stars": 4882,
+    "tags": ["state", "vue"]
+  },
+  {
+    "icon": "reveal.svg",
+    "descriptionEN": "The HTML Presentation Framework",
+    "descriptionCN": "HTML 表示框架",
+    "name": "Reveal",
+    "stars": 4734,
+    "tags": ["presentation"]
+  },
+  {
+    "icon": "react-flow.svg",
+    "descriptionEN": "Highly customizable library for building an interactive node-based UI, work...",
+    "descriptionCN": "高度可定制的库，用于构建基于节点的交互式 UI，工作......",
+    "name": "React Flow",
+    "stars": 4716,
+    "tags": ["diagram", "react", "graph"]
+  },
+  {
+    "icon": "floatingui.svg",
+    "descriptionEN": "A low-level toolkit to create floating elements. Tooltips, popovers, dropdo...",
+    "descriptionCN": "用于创建浮动元素的低级工具包。工具提示、弹出窗口、拖放...",
+    "name": "Floating UI",
+    "stars": 4702,
+    "tags": ["tooltip"]
+  },
+  {
+    "icon": "swr.svg",
+    "descriptionEN": "React Hooks for Data Fetching",
+    "descriptionCN": "用于数据获取的 React Hooks",
+    "name": "swr",
+    "stars": 4626,
+    "tags": ["data", "caching", "react"]
+  }
+]

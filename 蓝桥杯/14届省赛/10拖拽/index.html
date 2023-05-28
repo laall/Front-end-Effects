@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>组课神器</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <ul>
+          <li class="header-title">数据</li>
+          <li class="header-title active">章节</li>
+          <li class="header-title">学生</li>
+          <li class="header-title">报告</li>
+          <li class="header-title">问答</li>
+          <li class="header-title">纠错</li>
+          <li class="header-title">评论</li>
+        </ul>
+      </div>
+      <div class="tree" data-grade="0">
+        <!-- 每一章的 DOM 结构 start -->
+        <div class="tree-node" data-index="1001" data-grade="1">
+          <!-- 每一章标题的 DOM 结构 start -->
+          <div class="tree-node-content" style="margin-left: 0px">
+            <div class="tree-node-content-left">
+              <img src="./images/dragger.svg" alt="" class="point-svg" />
+              <span class="tree-node-label">第一章 Vue 初体验</span>
+              <img class="config-svg" src="./images/config.svg" alt="" />
+            </div>
+          </div>
+          <!-- 每一章标题的 DOM 结构 end -->
+
+          <!-- 每一章下所有小节的 DOM 结构 start -->
+          <div class="tree-node-children">
+            <!-- 第一个小节的 DOM 结构 start -->
+            <div class="tree-node" data-index="1002" data-grade="2">
+              <!-- 第一个小节标题的 DOM 结构 start -->
+              <div class="tree-node-content" style="margin-left: 15px">
+                <div class="tree-node-content-left">
+                  <img src="./images/dragger.svg" alt="" class="point-svg" />
+                  <span class="tree-node-label">1.1 Vue 简介</span>
+                  <img class="config-svg" src="./images/config.svg" alt="" />
+                </div>
+              </div>
+              <!-- 第一个小节标题的 DOM 结构 end -->
+              <!-- 每小节下所有文档/实验的 DOM 结构 start -->
+              <div class="tree-node-children">
+                <!-- 第一个文档/实验的 DOM 结构 start -->
+                <div class="tree-node" data-index="1003" data-grade="3">
+                  <div class="tree-node-content" style="margin-left: 30px">
+                    <div class="tree-node-content-left">
+                      <img
+                        src="./images/dragger.svg"
+                        alt=""
+                        class="point-svg"
+                      />
+                      <span class="tree-node-tag">实验1</span>
+                      <span class="tree-node-label">Vue 的发展历程</span>
+                    </div>
+                    <div class="tree-node-content-right">
+                      <div class="students-count">
+                        <span class="number"> 0人完成</span>
+                        <span class="line">|</span>
+                        <span class="number">0人提交报告</span>
+                      </div>
+                      <div class="config">
+                        <img
+                          class="config-svg"
+                          src="./images/config.svg"
+                          alt=""
+                        />
+                        <button class="doc-link">编辑文档</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 第一个文档/实验的 DOM 结构 end -->
+                <!-- 第二个文档/实验的 DOM 结构 start -->
+                <div class="tree-node" data-index="1003" data-grade="3">
+                  <div class="tree-node-content" style="margin-left: 30px">
+                    <div class="tree-node-content-left">
+                      <img
+                        src="./images/dragger.svg"
+                        alt=""
+                        class="point-svg"
+                      />
+                      <span class="tree-node-tag">实验1</span>
+                      <span class="tree-node-label">Vue 的发展历程</span>
+                    </div>
+                    <div class="tree-node-content-right">
+                      <div class="students-count">
+                        <span class="number"> 0人完成</span>
+                        <span class="line">|</span>
+                        <span class="number">0人提交报告</span>
+                      </div>
+                      <div class="config">
+                        <img
+                          class="config-svg"
+                          src="./images/config.svg"
+                          alt=""
+                        />
+                        <button class="doc-link">编辑文档</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 第一个文档/实验的 DOM 结构 end -->
+              </div>
+              <!-- 每小节下所有文档/实验的 DOM 结构 end -->
+            </div>
+            <!-- 第一个小节的 DOM 结构 end -->
+
+            <!-- 第二个小节的 DOM 结构 start -->
+            <div class="tree-node" data-index="1002" data-grade="2">
+              <!-- 第二个小节标题的 DOM 结构 start -->
+              <div class="tree-node-content" style="margin-left: 15px">
+                <div class="tree-node-content-left">
+                  <img src="./images/dragger.svg" alt="" class="point-svg" />
+                  <span class="tree-node-label">1.1 Vue 简介</span>
+                  <img class="config-svg" src="./images/config.svg" alt="" />
+                </div>
+              </div>
+              <!-- 第二个小节标题的 DOM 结构 end -->
+              <!-- 每小节下所有文档/实验的 DOM 结构 start -->
+              <div class="tree-node-children">
+                <!-- 第一个文档/实验的 DOM 结构 start -->
+                <div class="tree-node" data-index="1003" data-grade="3">
+                  <div class="tree-node-content" style="margin-left: 30px">
+                    <div class="tree-node-content-left">
+                      <img
+                        src="./images/dragger.svg"
+                        alt=""
+                        class="point-svg"
+                      />
+                      <span class="tree-node-tag">实验1</span>
+                      <span class="tree-node-label">Vue 的发展历程</span>
+                    </div>
+                    <div class="tree-node-content-right">
+                      <div class="students-count">
+                        <span class="number"> 0人完成</span>
+                        <span class="line">|</span>
+                        <span class="number">0人提交报告</span>
+                      </div>
+                      <div class="config">
+                        <img
+                          class="config-svg"
+                          src="./images/config.svg"
+                          alt=""
+                        />
+                        <button class="doc-link">编辑文档</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 第一个文档/实验的 DOM 结构 end -->
+                <!-- 第二个文档/实验的 DOM 结构 start -->
+                <div class="tree-node" data-index="1003" data-grade="3">
+                  <div class="tree-node-content" style="margin-left: 30px">
+                    <div class="tree-node-content-left">
+                      <img
+                        src="./images/dragger.svg"
+                        alt=""
+                        class="point-svg"
+                      />
+                      <span class="tree-node-tag">实验1</span>
+                      <span class="tree-node-label">Vue 的发展历程</span>
+                    </div>
+                    <div class="tree-node-content-right">
+                      <div class="students-count">
+                        <span class="number"> 0人完成</span>
+                        <span class="line">|</span>
+                        <span class="number">0人提交报告</span>
+                      </div>
+                      <div class="config">
+                        <img
+                          class="config-svg"
+                          src="./images/config.svg"
+                          alt=""
+                        />
+                        <button class="doc-link">编辑文档</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 第一个文档/实验的 DOM 结构 end -->
+              </div>
+              <!-- 每小节下所有文档/实验的 DOM 结构 end -->
+            </div>
+            <!-- 第二个小节的 DOM 结构 end -->
+          </div>
+          <!-- 每一章下所有小节的 DOM 结构 end -->
+        </div>
+        <!-- 每一章的 DOM 结构 end -->
+      </div>
+    </div>
+
+    <div class="hide" id="test"></div>
+
+    <script src="./js/axios.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+      document.querySelector(".header").addEventListener("click", () => {
+        ajax({ url: "", method: "post", data: {} });
+      });
+    </script>
+  </body>
+</html>

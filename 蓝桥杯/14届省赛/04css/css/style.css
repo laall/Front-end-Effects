@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #191620;
+}
+
+/* 菜单样式 */
+.menu {
+  background: #252525;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.menu li {
+  display: inline-block;
+}
+.menu a {
+  padding: 16px;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown li a {
+  display: block;
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+.dropdown ul {
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.5);
+  padding: 8px 0;
+  position: absolute;
+  min-width: 100%;
+}
+input.menu-btn,
+label.menu-btn {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .collapse {
+    border-top: 1px #959595 solid;
+  }
+}
+
+.menu li,
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu a {
+  color: #959595;
+  display: inline-block;
+  padding: 16px 32px;
+  text-decoration: none;
+}
+.dropdown:hover a,
+.menu a:hover {
+  color: #fff;
+}
+.menu ul ul {
+  display: none;
+}
+.dropdown:hover ul {
+  display: block;
+}
+.dropdown ul {
+  background: #fff;
+  padding: 0;
+}
+.dropdown ul a,
+.dropdown:hover ul a {
+  color: #000;
+}
+.dropdown ul a:hover,
+.dropdown:hover ul a:hover {
+  color: rgb(2, 107, 107);
+}
+.dropdown ul ul {
+  border-bottom: 1px #ccc solid;
+  border-top: 1px #ccc solid;
+  box-shadow: none;
+  margin-bottom: 16px;
+  max-width: 100%;
+  position: relative;
+}
+
+.icon-menu::before {
+  content: '\2630';
+}
+
+/* 页面内容 */
+.card {
+  width: 45%;
+  border: 2px solid;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+}
+.card img {
+  width: 100%;
+}
+.card-content {
+  font-size: 10px;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#tutorials {
+  max-width: 800px;
+  margin: 0 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1.5rem;
+  margin: 20px 0;
+}
+
+#tutorials h3 {
+  margin: 0;
+  color: #86fbfb;
+}
+
+#tutorials h4 {
+  margin: 0;
+  color: white;
+}
+
+.box {
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: darkcyan;
+  line-height: 1.5;
+}
+
+#tutorials img {
+  padding: 10px;
+  border: 1px solid #86fbfb;
+  border-radius: 25px;
+  width: 100%;
+  margin: 10px;
+  display: block;
+}
+
+/* TODO: 考生需要完成以下内容 */
+@media (max-width: 800px) {
+  input.menu-btn,
+  input[type='checkbox'].menu-btn ~ .collapse {
+    display: none;
+  }
+  input[type='checkbox']:checked.menu-btn ~ .collapse {
+    display: block;
+  }
+  label.menu-btn {
+    color: #959595;
+    cursor: pointer;
+    display: block;
+    padding: 16px 32px;
+  }
+  label.menu-btn:hover {
+    color: #fff;
+  }
+
+  .menu li {
+    display: block;
+  }
+  .collapse {
+    position: absolute;
+    background: #252525;
+    width: 100%;
+  }
+
+  .dropdown ul {
+    position: relative;
+  }
+
+  .row {
+    display: block;
+  }
+  #tutorials img {
+    width: 100%;
+    margin: 0;
+  }
+}

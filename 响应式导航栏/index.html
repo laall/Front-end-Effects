@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        height: 50px;
+        background: #262626;
+      }
+
+      .logo {
+        position: absolute;
+        padding-left: 20px;
+        float: left;
+        line-height: 50px;
+        text-transform: uppercase;
+        font-size: 1.4em;
+      }
+
+      .logo a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav {
+        float: right;
+      }
+
+      nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      nav ul li {
+        color: #a2a0a0;
+        float: left;
+        text-transform: uppercase;
+        transition: background 0.5s ease;
+      }
+
+      nav ul li:hover {
+        color: white;
+        background: #aaa;
+      }
+
+      nav ul li.active {
+        color: white;
+        background: #343831;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 0 20px;
+        line-height: 50px;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      @media all and (max-width: 768px) {
+        nav {
+          width: 100%;
+          padding: 50px 0 15px;
+        }
+        nav ul li {
+          float: none;
+          border-bottom: 1px solid lightgray;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#">Company Name</a>
+      </div>
+      <nav>
+        <div class="nav-responsive">
+          <a id="nav-toggle" href="/"><span></span></a>
+        </div>
+        <ul class="navlist">
+          <li><a>Home</a></li>
+          <li><a>Something</a></li>
+          <li><a>other</a></li>
+          <li><a>About</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

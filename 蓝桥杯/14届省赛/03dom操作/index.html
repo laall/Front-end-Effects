@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>收集帛书碎片</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="grid">
+      <div class="card"><img src="images/01.jpg" /></div>
+      <div class="card"><img src="images/02.jpg" /></div>
+      <div class="card"><img src="images/03.jpg" /></div>
+      <div class="card"><img src="images/04.jpg" /></div>
+      <div class="card"><img src="images/05.jpg" /></div>
+      <div class="card"></div>
+      <div class="card"><img src="images/07.jpg" /></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+    <div class="message">
+      <div class="tip">帛书碎片集结成功</div>
+      <div class="text-item" class="text-item-right">
+        <div class="chat-name">闷油瓶</div>
+        <div class="chat-box" id="user1"></div>
+      </div>
+      <div class="text-item" class="text-item-right">
+        <div class="chat-name">王胖子</div>
+        <div class="chat-box" id="user2"></div>
+      </div>
+      <div class="text-item" class="text-item-right">
+        <div class="chat-name">潘子</div>
+        <div class="chat-box" id="user3"></div>
+      </div>
+      <div class="button" id="btnmix">点击合成</div>
+      <div class="text-item" class="text-item-right">
+        <div class="chat-name">结果</div>
+        <div class="chat-box" id="result">等待合成</div>
+      </div>
+    </div>
+
+    <script src="./js/collect-puzzle.js"></script>
+    <script>
+      const redPuzzles = ["四时运转", "灾变", "四时运转", "天象"];
+      const bluePuzzles = ["四时运转", "月令禁忌", "天象"];
+      const greenPuzzles = ["月令禁忌", "天象", "四时运转", "天象"];
+      const resultPuzzles = collectPuzzle(
+        redPuzzles,
+        bluePuzzles,
+        greenPuzzles
+      );
+
+      document.getElementById("user1").innerText += JSON.stringify(redPuzzles);
+      document.getElementById("user2").innerText += JSON.stringify(bluePuzzles);
+      document.getElementById("user3").innerText +=
+        JSON.stringify(greenPuzzles);
+      document.getElementById("btnmix").onclick = function () {
+        document.getElementById("result").innerText =
+          JSON.stringify(resultPuzzles);
+        //当碎片集结成功时效果
+        let arr = ["四时运转", "灾变", "月令禁忌", "天象"];
+        if (
+          resultPuzzles.length === arr.length &&
+          resultPuzzles.filter((t) => !arr.includes(t))
+        ) {
+          document.querySelector(
+            ".card:nth-child(6)"
+          ).innerHTML = `<img src='images/06.jpg' />`;
+          document.querySelector(
+            ".card:nth-child(8)"
+          ).innerHTML = `<img src='images/08.jpg' />`;
+          document.querySelector(
+            ".card:nth-child(9)"
+          ).innerHTML = `<img src='images/09.jpg' />`;
+          document.getElementsByClassName("tip")[0].style.display = "block";
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>外卖给好评(element-ui二次封装)</title>
+    <link rel="stylesheet" href="./css/element-ui.style.css" />
+    <style>
+      body {
+        padding: 20px;
+      }
+      .result {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <my-rate @change="onRateChange"></my-rate>
+      <div class="result">评分结果：{{JSON.stringify(rate)}}</div>
+    </div>
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/http-vue-loader.js"></script>
+    <script src="./js/element-ui.min.js"></script>
+    <script>
+      Vue.use(httpVueLoader);
+      const app = new Vue({
+        el: "#app",
+        components: {
+          "my-rate": "url:./my-rate.vue",
+        },
+        data() {
+          return {
+            rate: {},
+          };
+        },
+        methods: {
+          onRateChange(rate) {
+            this.rate = rate;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
