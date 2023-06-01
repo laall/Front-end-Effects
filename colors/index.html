@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+    <style>
+      .box {
+        font-size: 10px;
+        width: 60px;
+        height: 30px;
+
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .main-box {
+        display: grid;
+        grid-template-columns: repeat(20, 60px);
+        grid-gap: 8px;
+      }
+      .msg {
+        border-radius: 10px;
+        left: 20px;
+        top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 100px;
+        position: fixed;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div v-if="copyText" :style="{backgroundColor: copyText }" class="msg">{{copyText}}</div>
+      <div v-if="copyed" :style="{backgroundColor: copyText }" class="msg">Coped!</div>
+
+      <div class="main-box">
+        <div
+          v-for="item in arr"
+          :style="{backgroundColor: rgb(item)}"
+          :key="item"
+          class="box"
+          @click="getColor"
+          @mousemove="copyText= rgb(item)"
+        >
+          {{ rgb(item) }}
+        </div>
+      </div>
+    </div>
+    <script>
+      // let arr = Array.from({ length: 100 }, (a, i) => i + 1)
+      // let arr2 = Array.from(Array(100).keys())
+      // console.log(arr)
+      new Vue({
+        el: '#app',
+        data() {
+          return {
+            arr: [1, 2, 3],
+            copyText: '',
+            timer: {},
+            copyed: false
+          }
+        },
+        methods: {
+          rgb(item) {
+            return `#${99 + item}`
+          },
+          getColor(e) {
+            // console.log('data', e.target.innerHTML)
+            clearTimeout(this.timer)
+            let input = document.createElement('input')
+            this.copyed = true
+            input.value = e.target.innerText
+            e.target.append(input)
+            input.select() // 选择对象
+            document.execCommand('Copy') // 执行浏览器复制命令
+            input.remove()
+            this.timer = setTimeout(() => {
+              this.copyed = false
+            }, 1000)
+          }
+        },
+        created() {
+          console.log(new Date())
+          this.arr = Array.from({ length: 1000 }, (a, i) => i + 1)
+        },
+        mounted() {
+          console.log(new Date())
+        }
+      })
+    </script>
+  </body>
+</html>

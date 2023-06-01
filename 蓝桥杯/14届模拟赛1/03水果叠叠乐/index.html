@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>水果叠叠乐</title>
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <ul id="card">
+      <li data-id="1" id="fruit-one">
+        <img src="./images/pineapple.svg" alt="" />
+      </li>
+      <li data-id="1" id="fruit-two">
+        <img src="./images/pineapple.svg" alt="" />
+      </li>
+      <li data-id="2" id="fruit-three">
+        <img src="./images/apple.svg" alt="" />
+      </li>
+      <li data-id="2" id="fruit-four">
+        <img src="./images/apple.svg" alt="" />
+      </li>
+      <li data-id="2" id="fruit-five">
+        <img src="./images/apple.svg" alt="" />
+      </li>
+      <li data-id="1" id="fruit-six">
+        <img src="./images/pineapple.svg" alt="" />
+      </li>
+      <li data-id="3" id="fruit-seven">
+        <img src="./images/avocado.svg" alt="" />
+      </li>
+      <li data-id="3" id="fruit-eight">
+        <img src="./images/avocado.svg" alt="" />
+      </li>
+      <li data-id="3" id="fruit-nine">
+        <img src="./images/avocado.svg" alt="" />
+      </li>
+      <li data-id="4" id="fruit-ten">
+        <img src="./images/grapes.svg" alt="" />
+      </li>
+      <li data-id="4" id="fruit-eleven">
+        <img src="./images/grapes.svg" alt="" />
+      </li>
+      <li data-id="4" id="fruit-twelve">
+        <img src="./images/grapes.svg" alt="" />
+      </li>
+    </ul>
+    <!-- 图片位置 -->
+    <!-- 卡槽位置 -->
+    <div class="fixed">
+      <div class="gradient-border" id="box"></div>
+    </div>
+    <script>
+      $('#card li').on('click', function (e) {
+        // TODO: 待补充代码
+        if ($('#box').children().length > 6) {
+          return
+        }
+        $('#box').append($(this).clone())
+        for (let i = 1; i < 5; i++) {
+          if ($(`#box li[data-id="${i}"]`).length > 2) {
+            $(`#box li[data-id="${i}"]`).remove()
+          }
+        }
+        $(this).addClass('active')
+      })
+    </script>
+  </body>
+</html>
