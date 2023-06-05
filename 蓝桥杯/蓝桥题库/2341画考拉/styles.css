@@ -1,0 +1,136 @@
+html,
+body {
+  background: #f8d8ab;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ears {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 240px;
+  width: 550px;
+}
+
+.ear {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #738394;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #f6b9bf;
+}
+
+.face {
+  z-index: 1;
+  width: 430px;
+  height: 380px;
+  background: #a0abb6;
+  border-radius: 50%;
+  align-items: center;
+
+  /* 创造一个网格布局
+  6 个纵列（column） --  
+    前后两列两等分 (可用 fr 代表一份)，
+    中间 4 列均为 25px 宽度
+  4 个横行（row） -- 
+    上下均为 50px，中间两等分
+  */
+  display: grid;
+  grid-template-columns: 1fr 25px 25px 25px 25px 1fr;
+  grid-template-rows: 50px 1fr 1fr 50px;
+
+}
+
+.eye {
+  /* 
+    长为 30px
+    高为 30px
+    颜色为 #090b0e
+    圆角为 50%
+    位置居中
+  */
+  width: 30px;
+  height: 30px;
+  background-color:#090b0e;
+  color:#090b0e;
+  border-radius: 50%;
+  grid-row: 2;
+ align-self: center;
+}
+
+.eye.left {
+  /* 按照图示选取 grid-area */
+  grid-area: 2/2;
+}
+
+.eye.right {
+  /* 按照图示选取 grid-area */
+  grid-area: 2/5;
+}
+
+.nose {
+  /* 
+    高为 100%
+    颜色为 #3b464f
+    上方圆角为 50%
+    下方圆角为 40%
+    按照图示选取 grid-area
+  */
+  height: 100%;
+  background-color: #3b464f;
+  border-radius: 50% 50% 40% 40% ;
+  grid-area:3/2/3/6
+
+
+}
+
+.blush {
+  /* 
+    长为 40px
+    高为 30px
+    颜色为 #f6b9bf
+    圆角为 50%
+  */
+  width: 40px;
+  height: 40px;
+  background-color:  #f6b9bf;
+  border-radius: 50% ;
+  
+}
+
+.blush.left {
+  /* 按照图示选取 grid-area
+      并调整位置
+   */
+   grid-area:2/1;
+align-self: flex-end;
+justify-self: end;
+}
+
+.blush.right {
+  /* 按照图示选取 grid-area
+    并调整位置
+  */
+  grid-area:2/6;
+  align-self: flex-end;
+  
+}

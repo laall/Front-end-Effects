@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 单行溢出处理 */
+      .overflowText p {
+        /* <p>  display默认为 -webkit-box 
+        此处最好用  display:block;
+        */
+        display: block;
+        width: 200px;
+        overflow: hidden; /*内容超出后隐藏*/
+        text-overflow: ellipsis; /*超出内容显示为省略号*/
+        word-break: break-all; /*拆分单词*/
+        white-space: nowrap;
+      }
+      /* 多行(2行)溢出处理 */
+      .overflowText2 {
+        width: 200px;
+        overflow: hidden; /*内容超出后隐藏*/
+        text-overflow: ellipsis; /*超出内容显示为省略号*/
+        /* word-break: break-all; */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      .overflowText3 p {
+        width: 200px;
+      }
+    </style>
+  
+  </head>
+  <body>
+    <div class="overflowText">
+      <p>
+        随着前端的发展，UI 框架经历了刀耕火种的时代，层出不穷的 UI 框架让前端再次大放异彩。ElementUI
+        作为前端发展史上最为经典的组件库之一，学习并了解它是如何构建的，以及它的源码是如何搭建出 UI
+        组件的，都将为我们今后的发展与应用提供可借鉴之处！
+      </p>
+    </div>
+    <div class="overflowText2">
+      <p>
+        随着前端的发展，UI 框架经历了刀耕火种的时代，层出不穷的 UI 框架让前端再次大放异彩。ElementUI
+        作为前端发展史上最为经典的组件库之一，学习并了解它是如何构建的，以及它的源码是如何搭建出 UI
+        组件的，都将为我们今后的发展与应用提供可借鉴之处！
+      </p>
+    </div>
+    <div class="overflowText3">
+      <p>
+        随着前端的发展，UI 框架经历了刀耕火种的时代，层出不穷的 UI 框架让前端再次大放异彩。ElementUI
+        作为前端发展史上最为经典的组件库之一，学习并了解它是如何构建的，以及它的源码是如何搭建出 UI
+        组件的，都将为我们今后的发展与应用提供可借鉴之处！
+      </p>
+    </div>
+    <script>
+      const text = document.querySelector('.overflowText3 p');
+      text.style.setProperty('-webkit-line-clamp', '2');
+      text.style.setProperty('overflow', 'hidden');
+      text.style.setProperty('text-overflow', 'ellispsis');
+      text.style.setProperty('display', '-webkit-box');
+      text.style.setProperty('-webkit-box-orient', 'vertical');
+    </script>
+  </body>
+</html>
+
+

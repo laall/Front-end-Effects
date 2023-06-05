@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>由文本溢出引发的“不友好体验”</title>
+    <link rel="stylesheet" href="https://labfile.oss.aliyuncs.com/courses/9203/03style.css">
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li class="more2_item more2_item_good hover-on"><span class="more2_item_gdot"></span><a class="more2_lk"
+                    href="" target="_blank">
+                    <div class="more2_img"><img src="https://labfile.oss.aliyuncs.com/courses/9203/04_02.jpg"
+                            class="lazyimg_img" alt="">
+                    </div>
+                    <div class="more2_info">
+                        <p class="more2_info_name">
+                            <i class="more2_info_self">新课</i>
+                            随着前端的发展，UI 框架经历了刀耕火种的时代，层出不穷的 UI 框架让前端再次大放异彩。ElementUI
+                            作为前端发展史上最为经典的组件库之一，学习并了解它是如何构建的，以及它的源码是如何搭建出 UI 组件的，都将为我们今后的发展与应用提供可借鉴之处！
+                        </p>
+                        <div class="more2_info_price more2_info_price_plus more2_info_price_newcomer">
+                            <div class="mod_price"><i>¥</i><span class="more2_info_price_txt">72.<span
+                                        class="more2_info_price_txt-decimal">00</span></span></div>
+                        </div>
+                    </div>
+                </a></li>
+        </ul>
+    </div>
+    <script>
+        // 请在下方补充代码，使得文本溢出 2 行时使用省略号
+       let text= document.querySelector('.more2_info_name')
+       text.style=' display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis;'
+    </script>
+</body>
+
+</html>

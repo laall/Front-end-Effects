@@ -11,7 +11,7 @@
  * 第四个参数是：是否将手机号（11 位数字）进行脱敏，默认为 true（规则是：保留前三位和后三位，中间脱敏占位）。
  *
  */
-const toDesensitization = (str, rules, symbol = '*', dealPhone = true) => {
+const toDesensitization = (str, rules= ['开心'], symbol = '*', dealPhone = true) => {
   if (!str) return null
   if (!rules) return str
   if (!Array.isArray(rules)) rules = [rules]

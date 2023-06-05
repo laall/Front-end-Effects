@@ -1,0 +1,351 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="./index.css"> -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    :root {
+      --theme_btn: #3375f1;
+      --theme_shadow: rgb(0 0 0 / 5%) 0px 4px 10px;
+      --theme_size_color: #87898b;
+      --theme_card_bgc: #fff;
+      --theme_aside_bgc: #fafcff;
+      --theme_article_bgc: #fff;
+      --theme_size: #000;
+    }
+
+    head,
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+
+    }
+
+    ul li {
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .svg {
+      width: 24px;
+      height: 24px;
+      margin-right: 4px;
+    }
+
+    header {
+      display: flex;
+      position: relative;
+      align-items: center;
+      height: 48px;
+      width: 100%;
+      font-size: 14px;
+      color: var(--theme_size_color);
+      background-color: var(--theme_card_bgc);
+      box-shadow: var(--theme_shadow);
+    }
+
+    header .logo {
+      width: 220px;
+      height: 80%;
+    }
+
+    header .nav {
+      display: flex;
+      height: 100%;
+      align-items: center;
+    }
+
+    header .nav li {
+      position: relative;
+      padding: 6px 12px;
+      margin-right: 18px;
+      font-size: 14px;
+      background-color: #fff;
+      border-radius: 1rem;
+    }
+
+    header .nav li:hover {
+      color: var(--theme_btn);
+    }
+
+    header .nav li::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      bottom: 0px;
+      left: 0;
+      background-color: var(--theme_btn);
+      transition: all .5s ease;
+      transform: scale(0);
+    }
+
+    header .nav li:hover::after {
+      transform: scale(1);
+    }
+
+    .container {
+      display: flex;
+      height: calc(100% - 48px);
+    }
+
+    .container aside {
+      width: 220px;
+      padding: 8px;
+      height: 100%;
+      color: var(--theme_size);
+      background-color: var(--theme_aside_bgc);
+      border-right: 1px solid #e9ebee;
+    }
+
+    .container aside .sub_nav li {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 7px 20px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+
+    .sub_nav li:hover {
+      background-color: #ecf5fe;
+    }
+
+    .container article {
+      flex: 1;
+      height: 100%;
+      padding: 20px 20px;
+      background-color: var(--theme_article_bgc);
+    }
+
+    .card_container {
+      display: flex;
+    }
+
+    article .card {
+      cursor: pointer;
+      width: 340px;
+      height: 200px;
+      font-size: 14px;
+      border: 1px solid #ededee;
+      margin-right: 40px;
+      border-radius: 4px;
+      transition: all .5s ease;
+      background-color: var(--theme_card_bgc);
+      /* box-shadow: rgb(0 0 0 / 5%) 0px 4px 10px; */
+    }
+
+    .card .header {
+      color: var(--theme_size);
+      display: flex;
+      font-size: 14px;
+      font-weight: 700;
+      align-items: center;
+      padding: 0 16px;
+      height: 56px;
+      justify-content: space-between;
+      border-bottom: 1px solid #ededee;
+    }
+
+    .card .header .more {
+      font-weight: 400;
+      color: var(--theme_btn);
+    }
+
+    .card .body {
+      padding: 10px 16px;
+      font-size: 14px;
+      color: var(--theme_size_color);
+    }
+
+    article .card:hover {
+      box-shadow: var(--theme_shadow);
+    }
+
+    button {
+      cursor: pointer;
+      width: 96px;
+      height: 32px;
+      border: 0px;
+      margin-top: 20px;
+      border-radius: 4px;
+      background-color: var(--theme_btn);
+      font-size: 14px;
+      color: #fff;
+    }
+  </style>
+  <script src="./index.js"></script>
+
+</head>
+
+
+<body>
+  <!-- 头部 -->
+  <header>
+    <img class="logo" src="../img/D-logo.svg" alt="">
+    <ul class="nav">
+      <li>
+        云居故里
+      </li>
+      <li>
+        柚子无敌
+      </li>
+      <li>
+        数据中心
+      </li>
+    </ul>
+  </header>
+  <!-- container -->
+  <div class="container">
+    <!-- 侧边栏 -->
+    <aside>
+      <ul class="sub_nav">
+        <li>
+          <img class="svg" src="../img/案例展示.svg">
+          我的喜欢
+        </li>
+        <li>
+          <img class="svg" src="../img/gongyizhanshi.svg">
+          我的收藏
+        </li>
+        <li>
+          <img class="svg" src="../img/guanzhugongzhonghao.svg">
+          我的查看
+        </li>
+        <li>
+          <img class="svg" src="../img/lunbobanner.svg">
+          个人中心
+        </li>
+        <li>
+          <img class="svg" src="../img/weiguanxinxi.svg">
+          福利中心
+        </li>
+        <li>
+          <img class="svg" src="../img/xuanfuanniu.svg">
+          个人设置
+        </li>
+        <li>
+          <img class="svg" src="../img/youhuiquan.svg">
+          朋友推荐
+        </li>
+        <li>
+          <img class="svg" src="../img/guanzhutiao.svg">
+          朋友圈
+        </li>
+      </ul>
+    </aside>
+    <!-- 主体 -->
+    <article>
+      <div class="card_container">
+        <div class="card">
+          <div class="header">
+            <span>Yyou Design</span>
+            <span class="more">更多</span>
+          </div>
+          <div class="body">Yyou Design是由互娱社区前端团队与 UED
+            团队共同设计开发并维护的设计系统。设计系统包含设计语言以及一整套可复用的前端组件，帮助设计师与开发者更容易地打造高质量的、用户体验一致的、符合设计规范的 Web 应用。</div>
+        </div>
+        <div class="card">
+          <div class="header">
+            <span>Yyou Design</span>
+            <span class="more">更多</span>
+          </div>
+          <div class="body">Yyou Design是由互娱社区前端团队与 UED
+            团队共同设计开发并维护的设计系统。设计系统包含设计语言以及一整套可复用的前端组件，帮助设计师与开发者更容易地打造高质量的、用户体验一致的、符合设计规范的 Web 应用。</div>
+        </div>
+        <div class="card">
+          <div class="header">
+            <span>Yyou Design</span>
+            <span class="more">更多</span>
+          </div>
+          <div class="body">Yyou Design是由互娱社区前端团队与 UED
+            团队共同设计开发并维护的设计系统。设计系统包含设计语言以及一整套可复用的前端组件，帮助设计师与开发者更容易地打造高质量的、用户体验一致的、符合设计规范的 Web 应用。</div>
+        </div>
+
+      </div>
+      <button>+ 添加card</button>
+      <button id="common">切换简约风格</button>
+      <button id="block">切换暗黑风格</button>
+      <button id="colorful">切换炫彩风格</button>
+    </article>
+  </div>
+
+</body>
+<script>
+window.onload = function () {
+  const commonBtn = document.getElementById('common');
+  const blockBtn = document.getElementById('block');
+  const colorfulBtn = document.getElementById('colorful');
+  const ThemeSwitch = {
+    common: {
+      '--theme_btn': '#3375f1',
+      '--theme_shadow': 'rgb(0 0 0 / 5 %) 0px 4px 10px',
+      '--theme_size_color': '#87898b',
+      '--theme_card_bgc': '#fff',
+      '--theme_aside_bgc': '#fafcff',
+      '--theme_article_bgc': '#fff',
+      '--theme_size': '#000',
+    },
+    block: {
+      '--theme_btn': 'purple',
+      '--theme_shadow': 'rgb(255 255 255 / 20 %) 0px 4px 10px',
+      '--theme_size_color': 'pink',
+      '--theme_card_bgc': 'block',
+      '--theme_aside_bgc': '#000',
+      '--theme_article_bgc': '#000',
+      '--theme_size': '#fff',
+    },
+    colorful: {
+      '--theme_btn': 'skyblue',
+      '--theme_shadow': 'rgb(0 0 0 / 5 %) 0px 4px 10px',
+      '--theme_size_color': 'orange',
+      '--theme_card_bgc': 'skyblue',
+      '--theme_aside_bgc': 'orange',
+      '--theme_article_bgc': 'pink',
+      '--theme_size': '#000',
+    },
+  }
+  console.log(document.body.style)
+  commonBtn.addEventListener('click', (e) => {
+    Object.keys(ThemeSwitch.common).reduce((acc, item) => {
+      document.styleSheets[0].cssRules[0].style.setProperty(item, ThemeSwitch.common[item])
+
+    }, [])
+  })
+  console.log(1)
+  blockBtn.addEventListener('click', (e) => {
+    Object.keys(ThemeSwitch.block).reduce((acc, item) => {
+      document.styleSheets[0].cssRules[0].style.setProperty(item, ThemeSwitch.block[item])
+
+    }, [])
+  })
+  colorfulBtn.addEventListener('click', () => {
+    Object.keys(ThemeSwitch.colorful).reduce((acc, item) => {
+      document.styleSheets[0].cssRules[0].style.setProperty(item, ThemeSwitch.colorful[item])
+    }, [])
+  })
+}
+
+
+</script>
+
+</html>
+<!-- 
+作者：佑子呀
+链接：https://juejin.cn/post/7153536590080376845
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 -->

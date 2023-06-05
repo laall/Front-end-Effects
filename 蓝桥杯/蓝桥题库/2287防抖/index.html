@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>防抖函数</title>
+  </head>
+  <style>
+    body {
+      padding: 100px;
+    }
+    .input-container{
+      margin-bottom: 15px;
+    }
+    .input-container,.output-container{
+      width: 800px;
+      margin:0 auto;
+    }
+    .text{
+      width: 30%;
+      text-align: right;
+      display: inline-block;
+      vertical-align: top;
+    }
+    #output{
+      display: inline-block;
+    }
+  </style>
+  <body>
+    <div class="input-container">
+      <span class="text">请输入查询参数：</span>
+      <input type="number" id="input">
+    </div>
+    <div class="output-container">  
+      <span class="text">AP请求发送情况：</span>
+      <span id="output"><span>
+    </div>
+    <script>
+      module={}
+    </script>
+    <script type="text/javascript" src="./debounce.js
+    "></script>
+    <script>
+      const debounceFn=module.exports;
+
+      const input=document.getElementById("input");
+      const output=document.getElementById("output");
+      
+      input.addEventListener("input",debounceFn((e)=>{
+        const value=input.value;
+        output.innerText+=`发送API请求，参数:${value} \n`;
+      },500
+      )); // 延后500ms执行
+    </script>
+  </body>
+</html>
