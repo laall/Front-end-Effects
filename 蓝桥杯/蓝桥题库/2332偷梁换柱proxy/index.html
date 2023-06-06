@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>合理设置人的年龄</title>
+  </head>
+  <style>
+    body {
+      padding: 100px;
+    }
+    .input-container{
+      margin-bottom: 15px;
+    }
+    .input-container,.output-container{
+      width: 500px;
+      margin:0 auto;
+    }
+    .text{
+      width: 30%;
+      text-align: right;
+      display: inline-block;
+    }
+  </style>
+  <body>
+    <div class="input-container">
+      <span class="text">请输出具体的年龄：</span>
+      <input type="number" id="input">
+    </div>
+    <div class="output-container">  
+      <span class="text">实际输出：</span>
+      <span id="output"><span>
+    </div>
+    <script>
+      module={}
+    </script>
+    <script type="text/javascript" src="./age.js"></script>
+    <script>
+      const p=module.exports;
+      const input=document.getElementById("input");
+      const output=document.getElementById("output");
+      
+      input.addEventListener("input",(e)=>{
+        p.age=e.target.value;
+        output.innerText=p.age;
+      })
+    </script>
+  </body>
+</html>

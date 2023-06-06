@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>虚拟滚动列表</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      #app {
+        display: flex;
+        justify-content: center;
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <my-virtual-scroll-list></my-virtual-scroll-list>
+    </div>
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/http-vue-loader.js"></script>
+    <script src="./js/axios.min.js"></script>
+    <script>
+      Vue.use(httpVueLoader)
+      const app = new Vue({
+        el: '#app',
+        components: {
+          'my-virtual-scroll-list': 'url:./my-virtual-scroll-list.vue'
+        }
+      })
+    </script>
+  </body>
+</html>
