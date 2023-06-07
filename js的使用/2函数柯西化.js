@@ -41,6 +41,7 @@ function add() {
   }
   return inner
 }
+
 console.log('add:', add(1)(2)(3, 4)(5, 6, 7, 8, 9)(10).toString())
 
 console.log(
@@ -50,6 +51,7 @@ console.log(
 )
 
 //
+
 //函数柯里化封装（这个封装可以直接复制走使用）
 function curry(fn, args) {
   var length = fn.length
@@ -75,3 +77,5 @@ console.log(multi(2)(3)(4))
 console.log(multi(2, 3, 4))
 console.log(multi(2)(3, 4))
 console.log(multi(2, 3)(4))
+
+
