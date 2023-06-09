@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --ImageWidth: 300px;
+        --ImageHeight: 200px;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .swipper {
+        position: relative;
+        background-color: #eee;
+        width: var(--ImageWidth);
+        height: var(--ImageHeight);
+        overflow: hidden;
+      }
+      .imgs {
+        width: fit-content;
+        transition: all ease 1s;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      .imgs li {
+        width: var(--ImageWidth);
+        height: var(--ImageHeight);
+        display: inline-block;
+        transition: all ease 1s;
+        background-color: lightcoral;
+        /* background-position: center; */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .imgs li:nth-child(1) {
+        background-image: url(./img/1.jpg);
+      }
+      .imgs li:nth-child(2) {
+        background-image: url(./img/2.jpg);
+      }
+      .imgs li:nth-child(3) {
+        background-image: url(./img/3.jpg);
+      }
+      .imgs li:nth-child(4) {
+        background-image: url(./img/4.jpg);
+      }
+      .imgs li:nth-child(5) {
+        background-image: url(./img/2.png);
+      }
+      .left-icon {
+        user-select: none;
+        background-color: rgba(255, 255, 255, 0.4);
+        width: 20px;
+        height: 30px;
+        line-height: 30px;
+        text-align: start;
+        align-items: center;
+        color: white;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .right-icon {
+        user-select: none;
+        background-color: rgba(255, 255, 255, 0.4);
+        width: 20px;
+        height: 30px;
+        line-height: 30px;
+        text-align: end;
+        align-items: center;
+        color: white;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .center-icons {
+        user-select: none;
+        position: absolute;
+        white-space: nowrap;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .center-icons li {
+        background-color: #fff;
+        border-radius: 50%;
+        margin: 5px;
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        transition: all ease 1s;
+      }
+      .center-icons .active {
+        transform: scale(1.5);
+        transition: all ease 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swipper">
+      <ul class="imgs">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="left-icon">&lt;</div>
+      <div class="right-icon">&gt;</div>
+
+      <ul class="center-icons"></ul>
+    </div>
+    <script>
+      const $ = query => document.querySelector(query)
+      const $all = query => document.querySelectorAll(query)
+      var timer
+      let len = $all('.imgs li').length
+      for (let i = 0; i < len; i++) {
+        $('.center-icons').appendChild(document.createElement('li'))
+      }
+      $('.center-icons li').className = 'active'
+      let component = {
+        index: 1
+      }
+      let proxy = new Proxy(component, {
+        set(target, prop, newVal) {
+          if (target[prop] === newVal) return
+          if (newVal < 1) newVal = len
+          if (newVal > len) newVal = 1
+
+          target[prop] = newVal
+          $('.imgs').style.transform = 'translateX(-' + (newVal - 1) * 300 + 'px)'
+          for (const li of $all('.center-icons li')) {
+            li.className = ''
+          }
+          $('.center-icons li:nth-child(' + newVal + ')').className = 'active'
+        }
+        // ,get(target, prop, proxy) {return target[prop]}
+      })
+      // proxy.index = 1
+      // console.log(proxy.index)
+
+      $('.left-icon ').addEventListener('click', () => {
+        proxy.index--
+      })
+      $('.right-icon ').addEventListener('click', () => {
+        proxy.index++
+      })
+
+      for (let i = 0; i < len; i++) {
+        $all('.center-icons li')[i].addEventListener('click', () => {
+          proxy.index = i + 1
+        })
+        let li = $all('.imgs li')[i]
+        let start, end
+        mousedownFunc = e => {
+          clearInterval(timer)
+          start = e.pageX
+        }
+        mouseupFunc = e => {
+          if (start == 0 && end === 0) return
+          end = e.pageX
+          if (start > end) proxy.index++
+          if (start < end) proxy.index--
+          ;(start = 0), (end = 0)
+        }
+        li.addEventListener('mousedown', mousedownFunc)
+        li.addEventListener('mouseup', mouseupFunc)
+        li.addEventListener('click', () => {
+          clearInterval(timer)
+          timer = setInterval(() => {
+            proxy.index++
+          }, 3000)
+        })
+      }
+      timer = setInterval(() => {
+        proxy.index++
+      }, 3000)
+    </script>
+  </body>
+</html>
