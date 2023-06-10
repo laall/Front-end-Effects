@@ -11,7 +11,6 @@ $(function () {
   $('#addAll').click(function () {
     // TODO：补充代码，实现功能
     const lis = []
-
     $('#leftSelect option').each((i, j) => {
       lis.push(j.value)
     })

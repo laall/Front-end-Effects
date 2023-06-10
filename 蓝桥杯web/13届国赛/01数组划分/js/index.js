@@ -2,7 +2,7 @@
  * @param {Object} oldArr
  * @param {Object} num
  * */
-const splitArray = (oldArr, num) => {
+const splitArray2 = (oldArr, num) => {
   // TODO：请补充代码实现功能
   var arr = oldArr.sort((a, b) => a - b)
   const len = oldArr.length
@@ -25,4 +25,14 @@ const splitArray = (oldArr, num) => {
   }
   return res
 }
+const splitArray = (oldArr, num) => {
+  // TODO：请补充代码实现功能
+  var arr = oldArr.sort((a, b) => a - b)
+  let res = []
+  for (let i = 0; i < arr.length; ) {
+    res.push(arr.slice(i, (i += num)))
+  }
+  return res
+}
+
 module.exports = splitArray // 检测需要，请勿删除

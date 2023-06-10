@@ -26,7 +26,6 @@ $('#reduce').onclick = e => addSymbol(e.target.innerText, '-')
 $('#multiply').onclick = e => addSymbol(e.target.innerText, '*')
 $('#division').onclick = e => addSymbol(e.target.innerText, '/')
 $('#sqrt').onclick = e => {
-  console.log(Math.sqrt(eval(calc)))
   let res = Math.sqrt(eval(calc))
   result.value = Number.isInteger(res) ? res : 'NaN'
 }
@@ -34,7 +33,6 @@ $('#decimal').onclick = e => {
   if (hasPoint) {
     return
   }
-
   hasPoint = true
   formula.value += e.target.innerText
   calc += '.'

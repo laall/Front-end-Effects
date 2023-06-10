@@ -11,7 +11,7 @@
  * 第四个参数是：是否将手机号（11 位数字）进行脱敏，默认为 true（规则是：保留前三位和后三位，中间脱敏占位）。
  *
  */
-const toDesensitization = (str, rules= ['开心'], symbol = '*', dealPhone = true) => {
+const toDesensitization = (str, rules = ['开心'], symbol = '*', dealPhone = true) => {
   if (!str) return null
   if (!rules) return str
   if (!Array.isArray(rules)) rules = [rules]
@@ -23,6 +23,7 @@ const toDesensitization = (str, rules= ['开心'], symbol = '*', dealPhone = tru
       return new Array(rule.length + 1).join(symbol)
     })
   }
+
   if (dealPhone) {
     str = str.replaceAll(/(1[0-9]{2})[0-9]{5}([0-9]{3})/g, (rep, a, b, index) => {
       ids.push(index)
@@ -30,12 +31,8 @@ const toDesensitization = (str, rules= ['开心'], symbol = '*', dealPhone = tru
     })
   }
 
-  return {
-    ids: ids.sort((a, b) => a - b),
-    newStr: str
-  }
+  return { ids: ids.sort((a, b) => a - b), newStr: str }
 }
-
 console.log(
   JSON.stringify(toDesensitization('开心每一天心15273773888,开心每一天心开心15273773888,每一天心', ['开心', '每'], '*', true), null)
 )
