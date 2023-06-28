@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+   
+      #app{
+        height: 500px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+      }
+      .container-he{
+        background-color: lightblue;
+        text-align: center;
+      }
+     
+      .container-me{
+        text-align: center;
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container-he">
+        <div>{{he.info.name}}</div>
+        <div 
+                       >
+<div v-for="item in he.cards">{{item.name}}{{item.HP}}{{item.ATK}}</div>
+        </div>
+      </div>
+      <div class="container-me">
+        <div>{{me.info.name}}</div>
+      </div>
+
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.3/vue.common.dev.js"></script>
+    <script>
+      let cards = [
+        { id: 1, name: 'A', HP: 10, ATK: 10 },
+        { id: 2, name: 'B', HP: 12, ATK: 8 },
+        { id: 2, name: 'C', HP: 9, ATK: 11 }
+      ]
+      const app = new Vue({
+        el: '#app',
+        data() {
+          return {
+            me: {
+              info: { id: 1, name: '用户1' },
+              cards: [cards[0], cards[1], cards[2]]
+            },
+            he: {
+              info: { id: 2, name: '用户2' },
+              cards: [cards[0], cards[1], cards[2]]
+            }
+          }
+        },
+        methods: {}
+      })
+    </script>
+  </body>
+</html>

@@ -6,14 +6,14 @@
         // CommonJS
         factory(exports, require('echarts'));
     } else {
-        // Browser globals 
+        // Browser globals
         factory({}, root.echarts);
     }
 }(this, function (exports, echarts) {
     var log = function (msg) {
         if (typeof console !== 'undefined') {
             console && console.error && console.error(msg);
-        } 
+        }
     }
     if (!echarts) {
         log('ECharts is not Loaded');
